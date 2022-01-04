@@ -29,6 +29,10 @@
                     </td>
                     <td align="right">
                         <xsl:value-of select="price" />
+
+                    </td>
+                    <td align="right">
+                        <xsl:value-of select="type" />
                         
                     </td>
                 </tr>
