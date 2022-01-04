@@ -15,12 +15,12 @@ width: 100%;
 /* Set the fixed height of the footer here */
 height: 60px;
 line-height: 60px; /* Vertically center the text there */
-background-color: #f5f5f5;
+background-color: #000000;
 }
 
 table, th, td {
     border-collapse: collapse;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     text-align: center;
 }
 
@@ -30,7 +30,7 @@ table {
 }
 
 td, th {
-    border: 1px solid #ced4da;
+    border: 1px solid #ff0000;
     padding: 0.5rem;
     text-align: left;
 }
@@ -40,6 +40,6 @@ th {
 }
 
 .selected {
-            background-color: #dc3545;
+            background-color: #c8ff00;
             color: #FFF;
 }
