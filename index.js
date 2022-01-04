@@ -60,10 +60,8 @@ router.post('/post/json', function(req, res) {
         XMLtoJSON('PaddysCafe.xml', function (err, result){
             if (err) throw (err);
 
-            result.menu.section[obj.sec_n].entry.push({'item': obj.item, 'price': obj.price});
-
+            result.menu.section[obj.sec_n].entry.push({'item': obj.item, 'price': obj.price, 'type': obj.type});
             console.log(JSON.stringify(result, null, " "));
-
             JSONtoXML('PaddysCafe.xml', result, function(err){
                 if (err) console.log(err);
             });
