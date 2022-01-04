@@ -1,7 +1,7 @@
 <?xml version="1.0"?> 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 <xsl:template match="/">
-<table id="menuTable" border="1" class="indent">
+<table id="menuTable" border="5" class="indent">
     <thead>
         <tr>
             <th>Select</th>
@@ -22,13 +22,13 @@
                     <xsl:attribute name="vegetarian">
                         <xsl:value-of select="boolean(@vegetarian)" />
                     </xsl:attribute>
-                    <td align="center">
+                    <td align="left">
                         <input name="item0" type="checkbox" />
                     </td>
                     <td>
                         <xsl:value-of select="item" />
                     </td>
-                    <td align="right">
+                    <td align="center">
                         <xsl:value-of select="price" />
 
                     </td>
