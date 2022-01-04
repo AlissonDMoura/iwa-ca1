@@ -29,6 +29,7 @@
                     </td>
                     <td align="right">
                         <xsl:value-of select="price" />
+                        
                     </td>
                 </tr>
             </xsl:for-each>
