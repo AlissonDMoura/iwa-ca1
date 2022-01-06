@@ -16,8 +16,7 @@ function calculateBill(idMenuTable) {
         if (aCBTags[i].checked) {
             // get the checkbox' parent table row
             var oTR = getParentTag(aCBTags[i], 'TR');
-
-            // retrieve the price from the price column, which is the third column in the table
+            // retrieve the price from the price column
             var oTDPrice = oTR.getElementsByTagName('TD')[2];
             // the first child text node of the column contains the price
             fBillTotal += parseFloat(oTDPrice.firstChild.data);
