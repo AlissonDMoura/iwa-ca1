@@ -22,7 +22,7 @@ function append(){
         url: '/post/json',
         dataType: 'json',
         contentType: 'application/json',
-        data: '{"sec_n": "' + $("#section").val() + '", "item":"' + $("#item").val() + '", "price":"' + $("#price").val() + '"}',
+        data: '{"sec_n": "' + $("#section").val() + '", "item":"' + $("#item").val() + '", "price":"' + $("#price").val() +  '", "type":"' + $("#type").val() + '"}',
         async: false,
         success: setTimeout(draw_table, 1000)
     });
@@ -34,7 +34,7 @@ function select_row()
     {
         $(".selected").removeClass("selected");
         $(this).addClass("selected");
-        var sec = $(this).prevAll("tr").children("td[colspan='3']").length - 1;
+        var sec = $(this).prevAll("tr").children("td[colspan='4']").length - 1;
         var ent = $(this).attr("id") - 1;
         delete_row(sec, ent);
     })

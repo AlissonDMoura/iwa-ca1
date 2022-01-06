@@ -13,7 +13,7 @@
     <tbody>
         <xsl:for-each select="//section">
             <tr>
-                <td colspan="3">
+                <td colspan="4">
                     <xsl:value-of select="@name" />
                 </td>
             </tr>

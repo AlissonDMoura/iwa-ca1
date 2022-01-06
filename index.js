@@ -35,15 +35,10 @@ router.get('/get/html', function(req, res) {
     let xml = fs.readFileSync('PaddysCafe.xml', 'utf8'), //read in the XML file
         xsl = fs.readFileSync('PaddysCafe.xsl', 'utf8'); //read in the XSL file
 
-    // console.log(xml);
-    // console.log(xsl);
-
     let doc = xmlParse(xml), //Parse the XML file
         stylesheet = xmlParse(xsl); //Parse the XSL file
 
     let result = xsltProcess(doc, stylesheet); //Performing XSLT
-
-    // console.log(result);
 
     res.end(result.toString()); //Serve back the user
 
@@ -61,6 +56,7 @@ router.post('/post/json', function(req, res) {
             if (err) throw (err);
 
             result.menu.section[obj.sec_n].entry.push({'item': obj.item, 'price': obj.price, 'type': obj.type});
+            result.menu.section[obj.sec_n].entry.push({})
             console.log(JSON.stringify(result, null, " "));
             JSONtoXML('PaddysCafe.xml', result, function(err){
                 if (err) console.log(err);
