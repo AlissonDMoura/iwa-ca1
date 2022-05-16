@@ -36,12 +36,8 @@ app.get('/',(req,res)=>{
 res.render('index')
 })
 
-app.get('/addDish',(req,res)=>{
-    res.render('addDish')
-    })
-
-    app.get('/add-dish',(req,res)=>{
-        res.render('add_dish')
+app.get('/add_dish',(req,res)=>{
+  res.render('add_dish')
         })
 
 
