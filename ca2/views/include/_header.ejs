@@ -1,68 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Iwa Practical CA." />
-        <meta name="author" content="Alisson Moura" />
-        <title>Paddy's Cafe, Modified</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <link href="css/PaddysCafe.css" rel="stylesheet" />
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-        crossorigin="anonymous"></script>
-        <script src="../../assets/js/table.js"></script>
-    </head>
-    <body>
-        <!-- Responsive navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paddy Caffe CA2</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- HEADER-->
+
+    <header id="header">
+        <nav>
             <div class="container">
-                <a class="navbar-brand" href="#">Paddy's Cafe</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-                    </ul>
+                <div class="text-center">
+                    <a href="/" class="nav-brand text-dark">Welcome to Paddy's Caffe</a>
                 </div>
             </div>
         </nav>
-        <!-- Page content-->
-        <div class="container">
-            <div class="row">
-                <div class="text-center mt-5">
-                    <h1>Welcome to Paddy's Cafe</h1>
-                    <p class="lead">Select your dishes from the menu below</p>
-                </div>
-                <div id="results" class="col-lg-8 order-2 mb-5"></div>
-                <div class="col-lg-4 order-1 mb-3">
-                    <form>
-                        <div class="form-group">
-                            <select id="section" class="form-control" name="sec_n">
-                                <option value="0">Drinks</option>
-                                <option value="1">Side Dishes</option>
-                                <option value="2">Breakfast</option>
-                                <option value="3">Lunch</option>
-                                <option value="4">Dinner</option>
-                            </select>
-                            <input id="item" class="form-control mt-3" type="text" name="item" placeholder="Item"/>
-                            <input id="price" class="form-control mt-3" type="text" name="price" placeholder="Price"/>
-                            <input id="type" class="form-control mt-3" type="text" name="type" placeholder="Type"/>
-                        </div>
-                    </form>
-                    <div class="d-grid gap-2">
-                        <button id="append" class="btn btn-primary btn-block mt-3" onClick="append()">Submit</button>
-                        <button id="delete" class="btn btn-danger btn-block">Delete Selection</button>
-                        <p class="text-muted text-center">To delete an entry, select a row before you click</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-       
-
-
-    <!-- /Header-->
-    
+    </header>

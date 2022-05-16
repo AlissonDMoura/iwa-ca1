@@ -34,7 +34,16 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 
 app.get('/',(req,res)=>{
 res.render('index')
-//res.send("/include/index.html")
 })
+
+app.get('/addDish',(req,res)=>{
+    res.render('addDish')
+    })
+
+    app.get('/add-dish',(req,res)=>{
+        res.render('add_dish')
+        })
+
+
 
 app.listen(3000,()=> {console.log("Server is running on http://locahost:${PORT}")})

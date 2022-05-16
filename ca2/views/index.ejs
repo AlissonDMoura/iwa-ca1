@@ -1,51 +1,13 @@
-<!-- Include header 
-
-/Include header -->
-
-<!-- Include footer
-
-/Include footer -->
-
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Iwa Practical CA2." />
-        <meta name="author" content="Alisson Moura" />
-        <title>Paddy's Cafe, Modified</title>
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="../assets/css/styles.css">
-        
-        
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../../assets/css/styles.css" rel="stylesheet" />
-        <link href="../../assets/css/PaddysCafe.css" rel="stylesheet" />
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-        crossorigin="anonymous"></script>
-        
-    </head>
-    <body>
-
-        <!--Header-->
-<header id="header">
-    <nav>
-        <div class = "container">
-            <div class = "text-center">
-                <a href="/" class="nav-brand text-dark"> Welcome to Paddy's Coffee</a>
-            </div>
-        </div>
-    </nav>
-</header>
+<!-- Include header -->
+<%- include('include/_header')%>
+<!-- /Include header -->
 
 <!--Main Site-->
 <main id="site-main">
     <div class="container">
-        <div class="box-nav d-flex-justify-between">
-            <a href = "/add-dish" class= "border-shadow">
-                <span class="text-gradient"> New Dish <i class="fas-regular fa-fork-knife"></i></span>
+        <div class="box-nav d-flex justify-between">
+            <a href="/add_dish" class="border-shadow">
+                <span class="text-gradient"> New Dish</span>
             </a>
 
             
@@ -64,20 +26,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Dish Name</td>
-                        <td>Dish type</td>
-                        <td>Price</td>
-                        <td>
-                            <a class="btn border-shadow update">
-                                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
-                            </a>
-                            <a class="btn border-shadow delete">
-                                <span class="text-gradient"><i class="fas fa-times"></i></span>
-                            </a>
-                        </td>
-                    </tr>
+                    <%- include('include/_show')%>
                 </tbody>
             </table>
         </form>
@@ -86,17 +35,7 @@
     </div>
 </main>
 
-   
-    </body>
-</html>
-
-
-
-
-
-
-
-
-
-
+<!-- Include footer -->
+<%- include('include/_footer')%>
+<!--/Include footer -->
 
