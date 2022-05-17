@@ -1,9 +1,9 @@
-
+<% for(var i = 0; i < users.length; i++) { %>
 <tr>
-    <td>1111111111111111</td>
-    <td>222222222222</td>
-    <td>333333333</td>
-    <td>44444</td>
+    <td> <%= i+1> </td>
+    <td> <%= users[i].name %> </td>
+    <td> <%= users[i].type %> </td>
+    <td> <%= users[i].price %> </td>
     <td>
         <a href="/update-dish" class="btn border-shadow update">
             <span class="text-gradient">Edit</span>
@@ -13,3 +13,4 @@
         </a>
     </td>
 </tr>
+<% } %>
