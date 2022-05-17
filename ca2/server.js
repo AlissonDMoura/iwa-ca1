@@ -5,6 +5,8 @@ const dotenv = require('dotenv');
 const bodyparser = require("body-parser");
 const path = require('path');
 
+const connectDB = require('./server/database/connection');
+
 const app = express();
 
 dotenv.config({path : 'config.env'})
@@ -13,6 +15,9 @@ const PORT = process.env.PORT || 8080
 
 app.use(morgan('tiny'));
 // log requests
+
+connectDB();
+//MongoDB connection
 
 app.use(bodyparser.urlencoded({extended : true}))
 // parse request to body-parset
@@ -30,16 +35,7 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 //load assets
 
 
-
-
-app.get('/',(req,res)=>{
-res.render('index')
-})
-
-app.get('/add_dish',(req,res)=>{
-  res.render('add_dish')
-        })
-
-
+app.use('/',require('./server/routes/router'))
+  
 
 app.listen(3000,()=> {console.log("Server is running on http://locahost:${PORT}")})

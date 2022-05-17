@@ -43,12 +43,17 @@ router.get('/get/html', function(req, res) {
     let xml = fs.readFileSync('PaddysCafe.xml', 'utf8'), //read in the XML file
         xsl = fs.readFileSync('PaddysCafe.xsl', 'utf8'); //read in the XSL file
 
+        console.log(xml);
+        console.log(xsl);
+
     let doc = xmlParse(xml), //Parse the XML file
         stylesheet = xmlParse(xsl); //Parse the XSL file
 
     let result = xsltProcess(doc, stylesheet); //Performing XSLT
-
+    console.log(result);
     res.end(result.toString()); //Serve back the user
+
+
 
 });
 
