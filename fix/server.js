@@ -31,7 +31,7 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 //load assets
 
 app.get('/',(req,res)=>{
-    res.send("Application")
+ res.render('index')
 })
 
 

@@ -30,12 +30,10 @@ app.set('view engine',"ejs")
 
 
 app.use('/css', express.static(path.resolve(__dirname, "assets/css")))
-app.use('/img', express.static(path.resolve(__dirname, "assets/img")))
 app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 //load assets
 
-
-app.use('/',require('./server/routes/router'))
-  
+//load routes
+app.use('/', require('./server/routes/router')) 
 
 app.listen(3000,()=> {console.log("Server is running on http://locahost:${PORT}")})
