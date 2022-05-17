@@ -1,10 +1,11 @@
 {
-  "name": "iwa-ca1",
-  "version": "0.0.1",
+  "name": "iwa-ca2",
+  "version": "1.0.0",
   "description": "Iwa Ca project",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -17,9 +18,17 @@
   },
   "homepage": "https://github.com/AlissonDMoura/iwa-ca1#readme",
   "dependencies": {
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
     "express": "^4.18.1",
     "fs": "^0.0.1-security",
     "http": "^0.0.1-security",
+    "mongodb": "^4.6.0",
+    "mongoose": "^6.3.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.16",
     "path": "^0.12.7",
     "xml2js": "^0.4.23",
     "xslt-processor": "^0.11.5"

@@ -1,0 +1,16 @@
+<% for(var i = 0; i < users.length; i++) { %>
+<tr>
+    <td><%= i+1></td>
+    <td><%= users[i].name></td>
+    <td><%= users[i].type></td>
+    <td><%= users[i].price></td>
+    <td>
+        <a href="/update-dish?id=<%= users[i]._id%>" class="btn border-shadow update">
+            <span class="text-gradient">Edit</span>
+        </a>
+        <a  href="#" class="btn border-shadow delete" data-id=<% users[i]._id%> >
+            <span class="text-gradient">Delete</span>
+        </a>
+    </td>
+</tr>
+<% } %>
