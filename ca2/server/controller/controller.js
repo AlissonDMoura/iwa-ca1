@@ -15,12 +15,12 @@ exports.create = (req,res)=>{
         price: req.body.price,
         })
 
-    // save user in the database
+    // save user input in the database
     user
         .save(user)
         .then(data => {
-            //res.send(data)
-            res.redirect('/add-user');
+            res.send(data)
+            //res.redirect('/add-user');
         })
         .catch(err =>{
             res.status(500).send({

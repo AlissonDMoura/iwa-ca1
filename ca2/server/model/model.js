@@ -8,8 +8,7 @@ var schema = new mongoose.Schema({
     type : {
         type: String,
         required: true,
-        unique: true
-    },
+                    },
     price : String    
 })
 
